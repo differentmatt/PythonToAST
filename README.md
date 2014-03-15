@@ -8,11 +8,14 @@ Javascript-based parser that translates Python code to the Mozilla abstract synt
 [escodegen](http://github.com/Constellation/escodegen) is used to generate Javascript from the AST
 
 Create parser: 
-pegjs python33.pegjs build\parser.js
+
+  1. pegjs python33.pegjs build\parser.js
 
 Testing parser:
-node test\test.js
+  
+  1. node test\test.js
 
 Testing end-to-end in browser:
-browserify -r ./build/parser.js -o ./build/bundle.js
-index.html
+
+  1. browserify -r ./build/parser.js -o ./build/bundle.js
+  2. Nav to index.html
