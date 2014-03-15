@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script type='text/javascript' src='build/bundle.js'></script>
+	<script src="lib/escodegen.browser.js"></script>
+	<script>
+		var parser = require('./build/parser.js');
+		function translate() {
+			try {
+				var code = inputText.value;
+				var ast = parser.parse(code)
+				astText.value = JSON.stringify(ast, null, 2);
+				var js = escodegen.generate(ast);
+				outputText.value = js;
+			}
+			catch (e) {
+				outputText.value = "";
+				astText.value = e.toString();
+			}
+		}
+	</script>
+</head>
+<body>
+<textarea id='inputText' style='1px solid black;width:45%;height:20%;'></textarea>
+<textarea id='outputText' style='1px solid blue;width:45%;height:20%;' readonly='true'></textarea>
+<textarea id='astText' style='1px solid green;width:100%;height:70%;' readonly='true'></textarea>
+<div><button type='button' onclick='translate()'>Translate</button></div>
+</body>
+</html>
