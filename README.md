@@ -3,7 +3,7 @@ PythonToAST
 
 Javascript-based parser that translates Python code to the Mozilla abstract syntax tree [AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API) format
 
-[pegjs](http://pegjs.majda.cz/) is used to generate the parser from a Python pegjs-style grammer definition
+[PEG.js](http://pegjs.majda.cz/) is used to generate the parser from a Python pegjs-style grammer definition
 
 [escodegen](http://github.com/Constellation/escodegen) is used to generate Javascript from the AST
 
